@@ -1,4 +1,4 @@
-Coming Soon - Application Insights for Docker
+Application Insights for Docker
 ===============================
 
 Visual Studio [Application Insights][appinsights-overview] for Docker helps you monitor your containerized applications by collecting telemetry about the performance and activity of your Docker host, Docker containers and the applications running within them.
