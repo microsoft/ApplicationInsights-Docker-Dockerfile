@@ -21,8 +21,8 @@ The Application Insights container talks to the Docker agent and sends telemetry
 ## How to use this Image
 
 1.	Obtain the instrumentation key of your Application Insights resource. (Look in the Essentials drop-down.) If you don’t have a resource, [create a new one][appinsights-create-resource].
-2.	Run the following command, replacing <app_ikey> with your instrumentation key:
-<br /><b>docker run -v /var/run/docker.sock:/docker.sock -d microsoft/applicationinsights ikey=\<app_ikey\></b>
+2.	Run the following command, replacing %app_ikey% with your instrumentation key:
+docker run -v /var/run/docker.sock:/docker.sock -d microsoft/applicationinsights ikey=%app_ikey%
 3.	If your application is instrumented with the Application Insights SDK for Java, add the following line into the ApplicationInsights.xml file in your project, under the <TelemetryInitializers> element:
 <Add type="com.microsoft.applicationinsights.extensibility.initializer.docker.DockerContextInitializer"/>
 
