@@ -1,6 +1,3 @@
-Application Insights for Docker
-===============================
-
 Visual Studio [Application Insights][appinsights-overview] for Docker helps you monitor your containerized applications by collecting telemetry about the performance and activity of your Docker host, Docker containers and the applications running within them.
 The Application Insights container talks to the Docker agent and sends telemetry data back to [Application Insights][appinsights-home], providing you with diagnostics and data analysis tools.
 
@@ -28,21 +25,12 @@ docker run -v /var/run/docker.sock:/docker.sock -d microsoft/applicationinsights
 
 Note: Only a single container is required per Docker host. If your application is deployed on multiple Docker hosts, then create an instance of this image on every host.
 
-## To see Docker data
-Sign in to the [Azure portal][azure-portal] and browse to your Application Insights resource.
-
-#### In [Search][azure-appinsights-portal-search], you can:
-* See events specific to Docker. Look for the events under the Custom grouping.
-* Filter both application and Docker events on specific host, image and container values.
-
-#### In [Metrics Explorer][azure-appinsights-portal-me], you can:
-* Add or edit a chart to show counts of Docker events. 
-* Filter or Group any chart by Docker host, image or container.
+## How to see Docker data
+To get full Docker experience in [Application Insights portal][azure-portal], please read [Monitor Docker applications in Application Insights][appinsights-docker-article]
 
 [appinsights-home]: https://azure.microsoft.com/en-us/services/application-insights/
 [appinsights-overview]: https://azure.microsoft.com/en-us/documentation/articles/app-insights-overview/
 [appinsights-java-sdk]: https://azure.microsoft.com/en-us/documentation/articles/app-insights-java-get-started/
 [appinsights-create-resource]: https://azure.microsoft.com/documentation/articles/app-insights-create-new-resource/
 [azure-portal]: https://portal.azure.com/
-[azure-appinsights-portal-search]: https://azure.microsoft.com/en-us/documentation/articles/app-insights-diagnostic-search/
-[azure-appinsights-portal-me]: https://azure.microsoft.com/documentation/articles/app-insights-metrics-explorer/
+[appinsights-docker-article]: https://azure.microsoft.com/en-us/documentation/articles/app-insights-docker/
