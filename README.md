@@ -13,9 +13,13 @@ The Application Insights container talks to the Docker agent and sends telemetry
 * The Docker context (Docker host, image and container) is added to all telemetry data types collected by the Application Insights SDK (exceptions, http requests, events). This allows you to filter and segment your data by context.
 
 ## Supported tags
-* [`0.9.2`, `latest` _(0.9.2/Dockerfile)_](https://github.com/Microsoft/ApplicationInsights-Docker-CI/tree/master/0.9.2/Dockerfile)
-* [`0.9.1`, _(0.9.1/Dockerfile)_](https://github.com/Microsoft/ApplicationInsights-Docker-CI/tree/master/0.9.1/Dockerfile)
-* [`0.9.0`, _(0.9.0/Dockerfile)_](https://github.com/Microsoft/ApplicationInsights-Docker-CI/tree/master/0.9.0/Dockerfile)
+* [`0.9.0`, _(0.9)_](https://github.com/kbeaugrand/ApplicationInsights-Docker/tree/0.9.0/Dockerfile)
+
+## Supported platforms
+* linux/amd64
+* linux/arm64
+* linux/386
+* linux/arm/v7
 
 ## How to use this Image
 
