@@ -9,12 +9,9 @@ RUN apt-get -y -qq update \
 	&& apt-get -y -qq install openjdk-8-jdk python3.4 \
 	&& ln -s /usr/bin/python3.4 /usr/bin/python \
 
+	# Install python dependencies
 	&& apt-get -y -qq install python3-pip \
-	&& python -m pip install -r requirements \
-
-	# docker-py is dependent on the 'requests' module which currently has a bug. Therefore, the docker-py
-	# must be installed last otherwise no other modules can be installed.
-	&& python -m pip install docker-py==1.3.1 \
+	&& python -m pip install -r requirements.txt \
 	
 	# Download and build sources
 	&& export TERM=${TERM:-dumb} \
