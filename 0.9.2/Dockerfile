@@ -1,4 +1,4 @@
-FROM java:8u66
+FROM ubuntu
 
 WORKDIR /usr/docker
 COPY requirements.txt ./
@@ -6,7 +6,7 @@ COPY requirements.txt ./
 RUN apt-get -y -qq update \
 	&& apt-get -y -qq remove python \
 	&& apt-get -y -qq autoremove \
-	&& apt-get -y -qq install python3.4 \
+	&& apt-get -y -qq install openjdk-8-jdk python3.4 \
 	&& ln -s /usr/bin/python3.4 /usr/bin/python \
 
 	&& apt-get -y -qq install python3-pip \
