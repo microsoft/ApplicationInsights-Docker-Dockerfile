@@ -8,7 +8,7 @@ RUN apt-get -y -qq update \
 RUN export TERM=${TERM:-dumb} \
 	&& git clone https://github.com/Microsoft/ApplicationInsights-Docker \
 	&& cd /usr/docker/ApplicationInsights-Docker \
-	&& git checkout tags/v0.9.1 \
+	&& git checkout tags/v0.9.2 \
 	&& chmod +x ./gradlew \
 	&& ./gradlew shadow 2>&1
 	
