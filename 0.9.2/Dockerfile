@@ -1,15 +1,16 @@
 FROM java:8u66
 
 WORKDIR /usr/docker
+COPY requirements.txt ./
+
 RUN apt-get -y -qq update \
 	&& apt-get -y -qq remove python \
 	&& apt-get -y -qq autoremove \
 	&& apt-get -y -qq install python3.4 \
 	&& ln -s /usr/bin/python3.4 /usr/bin/python \
 
-	# TODO: run a script to install all libraries from requirements.txt
 	&& apt-get -y -qq install python3-pip \
-	&& python -m pip install python-dateutil==2.4.2 \
+	&& python -m pip install -r requirements \
 
 	# docker-py is dependent on the 'requests' module which currently has a bug. Therefore, the docker-py
 	# must be installed last otherwise no other modules can be installed.
