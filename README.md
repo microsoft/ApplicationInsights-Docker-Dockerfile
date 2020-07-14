@@ -1,3 +1,7 @@
+This repo is [not currently maintained or supported](https://docs.microsoft.com/en-us/azure/azure-monitor/app/docker) by Microsoft. Check out our official documentation for the latest investments in [container monitoring](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview).
+
+## Overview
+
 Visual Studio [Application Insights][appinsights-overview] for Docker helps you monitor your containerized applications by collecting telemetry about the performance and activity of your Docker host, Docker containers and the applications running within them.
 The Application Insights container talks to the Docker agent and sends telemetry data back to [Application Insights][appinsights-home], providing you with diagnostics and data analysis tools.
 
